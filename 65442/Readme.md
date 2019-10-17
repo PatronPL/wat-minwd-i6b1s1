@@ -1,3 +1,6 @@
+Micha³ Kubryn I6B1S1
+
+
 Wyroby	 | Zu¿ycie |  surowca na jednostkê | Zysk jednostkowy [z³]
 	I	II	
 W1	5	1	10
