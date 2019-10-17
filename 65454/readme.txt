@@ -8,3 +8,6 @@ P1: 15
 P2: 15
 
 Wynik(cena): 45
+
+
+Rafał SZCZEPAŃSKI
