@@ -1,4 +1,4 @@
-Zadanie 7
+Zadanie 7 Piotr Kostrzewski
 
 LP1 - liczba kilogramów paszy P1
 LP2 - liczba kilogramów paszy P2
