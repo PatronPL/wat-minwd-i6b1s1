@@ -1,3 +1,5 @@
+Paweł Wałęga
+
 # Instalacja
 
 pip install -r requirements.txt w folderze z tym plikiem
