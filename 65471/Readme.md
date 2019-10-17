@@ -40,3 +40,8 @@ x3 = 0
 x4 = 0
 
 Cel = 10398
+
+Instalacja:
+W folderze uruchomić w terminal następnie wpisać następujące komendy: 
+1) pip install -r requirements.txt
+2) python Code.py
