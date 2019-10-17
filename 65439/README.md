@@ -1,3 +1,6 @@
+Michał Kozłowski I6B1S1
+
+
 # Treść 
 
 Zadanie 8. Przedsiębiorstwo produkuje trzy wyroby. Do ich produkcji zużywa się m.in. dwa limitowane surowce. Zużycie tych surowców na jednostkę każdego z wyrobów, dopuszczalne limity zużycia oraz zyski jednostkowe ze sprzedaży podano w tabeli poniżej. Należy wyznaczyć takie ilości poszczególnych wyrobów, aby zysk był maksymalny.
