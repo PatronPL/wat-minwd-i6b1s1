@@ -1,4 +1,5 @@
 numer albumu 65443
+Kacper Lenkiewicz I6B1S1
 
 
 Zadanie 2. Przedsiębiorstwo produkuje dwa wyroby. Do ich produkcji zużywa się m.in. dwa limitowane surowce. Zużycie tych surowców na jednostkę każdego z wyrobów, dopuszczalne limity zużycia oraz zyski jednostkowe ze sprzedaży podano w tabeli poniżej.
