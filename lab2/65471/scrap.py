@@ -16,6 +16,30 @@ def get_as_base64(url):
     return base64.b64encode(requests.get(url).content)
 
 
+def separate_data(car_list, param_list):
+    for car in carList:
+        price = car.find('span', class_='offer-price__number').text.strip().replace(' ', '').replace('\n', ' ')
+        priceList.append(price)
+        title = car.find('a', class_='offer-title__link').text.strip()
+        titleList.append(title)
+        image = car.find('img').get('data-src')
+        imageList.append(image)
+
+        for param in paramList:
+            current_parameter = car.find('li', {'data-code': param})
+            if current_parameter:
+                if param == 'year':
+                    yearList.append(current_parameter.text.strip())
+                elif param == 'mileage':
+                    mileageList.append(current_parameter.text.strip())
+                elif param == 'engine_capacity':
+                    engineCapacityList.append(current_parameter.text.strip())
+                else:
+                    fuelTypeList.append(current_parameter.text.strip())
+            else:
+                continue
+
+
 brand = sys.argv[1]
 model = sys.argv[2]
 startYear = sys.argv[3]
@@ -26,6 +50,7 @@ endYear = sys.argv[7]
 mileageFrom = sys.argv[8]
 mileageTo = sys.argv[9]
 
+paramList = ['year', 'mileage', 'engine_capacity', 'fuel_type']
 path = 'https://www.otomoto.pl/osobowe/' + brand + '/' + model + '/od-' + startYear + '/' + location + '/?search%5Bfilter_float_price%3Afrom%5D=' + priceFrom + '&search%5Bfilter_float_price%3Ato%5D=' + priceTo + '&search%5Bfilter_float_year%3Ato%5D=' + endYear + '&search%5Bfilter_float_mileage%3Afrom%5D=' + mileageFrom + '&search%5Bfilter_float_mileage%3Ato%5D=' + mileageTo
 res = requests.get(path)
 res.raise_for_status()
@@ -49,28 +74,7 @@ if int(deb.__len__()) == 0:
     currentPage = bs4.BeautifulSoup(res.text, features='lxml')
     carList = currentPage.select('article.offer-item')
 
-    for car in carList:
-        price = car.find('span', class_='offer-price__number').text.strip().replace(' ', '').replace('\n', ' ')
-        priceList.append(price)
-        title = car.find('a', class_='offer-title__link').text.strip()
-        titleList.append(title)
-        image = car.find('img').get('data-src')
-        imageList.append(image)
-
-        paramList = ['year', 'mileage', 'engine_capacity', 'fuel_type']
-        for param in paramList:
-            currentParameter = car.find('li', {'data-code': param})
-            if currentParameter:
-                if param == 'year':
-                    yearList.append(currentParameter.text.strip())
-                elif param == 'mileage':
-                    mileageList.append(currentParameter.text.strip())
-                elif param == 'engine_capacity':
-                    engineCapacityList.append(currentParameter.text.strip())
-                else:
-                    fuelTypeList.append(currentParameter.text.strip())
-            else:
-                continue
+    separate_data(car_list=carList, param_list=paramList)
 
 else:
     lastPage = int(carSoup.select('.page')[-1].text)
@@ -81,28 +85,7 @@ else:
         currentPage = bs4.BeautifulSoup(res.text, features='lxml')
         carList = currentPage.select('article.offer-item')
 
-        for car in carList:
-            price = car.find('span', class_='offer-price__number').text.strip().replace(' ', '').replace('\n', ' ')
-            priceList.append(price)
-            title = car.find('a', class_='offer-title__link').text.strip()
-            titleList.append(title)
-            image = car.find('img').get('data-src')
-            imageList.append(image)
-
-            paramList = ['year', 'mileage', 'engine_capacity', 'fuel_type']
-            for param in paramList:
-                currentParameter = car.find('li', {'data-code': param})
-                if currentParameter:
-                    if param == 'year':
-                        yearList.append(currentParameter.text.strip())
-                    elif param == 'mileage':
-                        mileageList.append(currentParameter.text.strip())
-                    elif param == 'engine_capacity':
-                        engineCapacityList.append(currentParameter.text.strip())
-                    else:
-                        fuelTypeList.append(currentParameter.text.strip())
-                else:
-                    continue
+        separate_data(car_list=carList, param_list=paramList)
 
 fileDisplay = [{'Price': p, 'Title': t, 'Year': y, 'Mileage': m, 'Engine_Capacity': e, 'Fuel_Type': f, 'Image': get_as_base64(i)} for
                p, t, y, m, e, f, i in zip(priceList, titleList, yearList, mileageList, engineCapacityList, fuelTypeList, imageList)]

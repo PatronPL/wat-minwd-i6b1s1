@@ -1,4 +1,4 @@
-#Opis programu
+# Opis programu
 
 Wykonany scrapper pobiera dane o samochodach osobowych ze strony https://www.otomoto.pl/ oraz zapisując je w pliku o formacie json
 
@@ -6,7 +6,7 @@ Wykonany scrapper pobiera dane o samochodach osobowych ze strony https://www.oto
 
 Python 3.7
 
-#Instrukcja uruchomieniowa
+# Instrukcja uruchomieniowa
 
 1) Wejść do katalogu z plikami requirements.txt, scrap.py, Readme.md oraz car.json (występuje po poprawnym uruchomieniu programu)
 2) Otworzyć konsole systemową w tym katalogu
@@ -27,7 +27,7 @@ Python 3.7
 
 Przykładowy skrypt powinien zwrócic wszsytkie volkswageny marki passat od roku 2011 do 2013 z Warszawy o cenie od 20000 do 65000 i przebiegu od 50000 do 250000
 
-#Dane wynikowe
+# Dane wynikowe
 
 W pliku car.json zostaną zapisane pobrane dane posiadające następującą postać:
 [
@@ -52,6 +52,6 @@ Legenda:
 - Fuel_Type -> rodzaj paliwa,
 - Image -> zdjęcie w kodowaniu base64
 
-#Autor
+# Autor
 Damian ŻYŁKA
 I6B1S1
