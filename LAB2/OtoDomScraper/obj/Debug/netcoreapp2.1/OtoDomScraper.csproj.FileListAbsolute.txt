@@ -1,0 +1,11 @@
+C:\REPOS\OtoDomScraper\OtoDomScraper\bin\Debug\netcoreapp2.1\OtoDomScraper.deps.json
+C:\REPOS\OtoDomScraper\OtoDomScraper\bin\Debug\netcoreapp2.1\OtoDomScraper.runtimeconfig.json
+C:\REPOS\OtoDomScraper\OtoDomScraper\bin\Debug\netcoreapp2.1\OtoDomScraper.runtimeconfig.dev.json
+C:\REPOS\OtoDomScraper\OtoDomScraper\bin\Debug\netcoreapp2.1\OtoDomScraper.dll
+C:\REPOS\OtoDomScraper\OtoDomScraper\obj\Debug\netcoreapp2.1\OtoDomScraper.csprojAssemblyReference.cache
+C:\REPOS\OtoDomScraper\OtoDomScraper\obj\Debug\netcoreapp2.1\OtoDomScraper.csproj.CoreCompileInputs.cache
+C:\REPOS\OtoDomScraper\OtoDomScraper\obj\Debug\netcoreapp2.1\OtoDomScraper.AssemblyInfoInputs.cache
+C:\REPOS\OtoDomScraper\OtoDomScraper\obj\Debug\netcoreapp2.1\OtoDomScraper.AssemblyInfo.cs
+C:\REPOS\OtoDomScraper\OtoDomScraper\bin\Debug\netcoreapp2.1\OtoDomScraper.pdb
+C:\REPOS\OtoDomScraper\OtoDomScraper\obj\Debug\netcoreapp2.1\OtoDomScraper.dll
+C:\REPOS\OtoDomScraper\OtoDomScraper\obj\Debug\netcoreapp2.1\OtoDomScraper.pdb
