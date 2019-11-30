@@ -1,8 +1,8 @@
-#Opis
+# Opis
 
 Scraper pobierający i zapisujący dane ogłoszeń samochodów osobowych z serwisu otomoto.pl
 
-#Wymagania 
+# Wymagania 
 
 Język GO, który można pobrać ze strony https://golang.org/doc/install
 Oraz biblioteki które można pobrać w następujący sposób:
