@@ -28,13 +28,13 @@ Należy uruchomić konsole systemową i wpisać poniższe polecania:
 5. Po zakończeniu działania programu wyniki można zobaczyć po otworzeniu pliku otomoto.json, który znajduję się w tym samym katalogu
 # Plik otomoto.json
 
-Legenda
-      "title": <- nazwa ogłoszenia
-      "link":  <- link do ogłoszenia
-      "year": <- rok produkcji 
-      "mileage": <- przebieg
-      "engine_capacity": <- pojemność silnika
-      "fuel_type": " <- rodzaj paliwa
-      "city": <- miasto (z województwem)
-      "price": <- cena
-      "img": <- zdjęcie zapisane w formacie base64
+Legenda:
+- "title": <- nazwa ogłoszenia,
+- "link":  <- link do ogłoszenia,
+- "year": <- rok produkcji,
+- "mileage": <- przebieg,
+- "engine_capacity": <- pojemność silnika,
+- "fuel_type": " <- rodzaj paliwa,
+- "city": <- miasto (z województwem),
+- "price": <- cena,
+- "img": <- zdjęcie zakodowane w base64
