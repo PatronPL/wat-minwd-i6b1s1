@@ -5,4 +5,5 @@ Aplikacja mobilna, pozwalająca na wyświetlenie położenia wszystkich warszaws
 ## Autorzy
 
 Piotr Kostrzewski
+
 Michał Bryła
