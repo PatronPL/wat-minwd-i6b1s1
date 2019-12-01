@@ -1,8 +1,8 @@
-##Opis Projektu
+## Opis Projektu
 
 Aplikacja mobilna, pozwalająca na wyświetlenie położenia wszystkich warszawskich autobusów lub tramwajów z wybranej linii.
 
-##Autorzy
+## Autorzy
 
 Piotr Kostrzewski
 Michał Bryła
