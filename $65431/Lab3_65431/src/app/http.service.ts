@@ -15,4 +15,5 @@ export class HttpService {
   getByLine(number) {
     return this.http.get(this.url+"line/"+number);
   }
+
 }

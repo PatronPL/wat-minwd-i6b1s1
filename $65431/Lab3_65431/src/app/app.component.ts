@@ -64,13 +64,16 @@ export class AppComponent implements OnInit {
    {
      if(modelForm.value.number != null)
      {
-       this.selectedNumber = modelForm.value.number;
+      this.selectedNumber = modelForm.value.number;
       this.http.getByLine(this.selectedNumber).subscribe((data : any[]) => {this.trams=data; console.log(this.trams);});
       
        setInterval(() => {
+
+        console.log("Wszystko pobrane a teraz: "+this.selectedNumber);
         this.http.getByLine(this.selectedNumber).subscribe((data: any[]) =>
         {
           this.trams=data;
+          console.log(this.trams);
           
           this.trams.forEach(value =>{
             if(value.brigade==this.selectedBrigade)
