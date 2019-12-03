@@ -1,6 +1,8 @@
+## Opis Projektu
+
 Scrapper do otomoto wykonany w technologii Java. Pobiera ogłoszenia z serwisu oraz zapisuje je do pliku w formacie .json.
 
-Jak uruchomić:
+## Jak uruchomić
 
 1. Otwórz terminal i przejdź do katalogu z projektem (katalog minwdScrapper).
 
@@ -18,5 +20,6 @@ p8 - przebieg maksymalny.
 
 4. Aby otworzyć plik z ogłoszeniami spełniającymi kryteria wpisz polecenie 'gedit MyDreamCarsjson'
 
-Autor:
+## Autor
+
 Piotr Kostrzewski I6B1S1
