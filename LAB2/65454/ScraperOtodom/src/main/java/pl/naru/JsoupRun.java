@@ -13,43 +13,31 @@ import java.util.Scanner;
 
 public class JsoupRun {
     static Scanner scanner = new Scanner(System.in);
+    static Connection connection;
+    static Elements links;
+    static String url;
+    static final String FIRST_PAGE = "1";
 
     public static void main(String[] args) throws IOException {
-        String sellOrRent;
-        String houseOrAccommodation;
-        String cityName;
-        int page;
-        System.out.println("Hello, would you like to sell or rent(sprzedaz/wynajem)?");
-        sellOrRent = scanner.nextLine().toLowerCase();
-        System.out.println("Okay and say me, would You like to live in a house or accommodation(dom/mieszkanie)?");
-        houseOrAccommodation = scanner.nextLine().toLowerCase();
-        System.out.println("almost done! The last thing is the city you want to live in(nazwa miasta): ");
-        cityName = scanner.nextLine().toLowerCase();
-        StringBuilder sb = new StringBuilder("https://www.otodom.pl/");
-        sb.append(sellOrRent).append("/");
-        sb.append(houseOrAccommodation).append("/");
-        sb.append(cityName).append("/?search&nrAdsPerPage=72&page=");
+        url = createURL();
 
-
-        Connection connection = Jsoup.connect(sb.toString()+"1");
-        Elements links; //= connection.get().getElementsByTag("article");
+        connection = Jsoup.connect(url + FIRST_PAGE);
         String offersCount = connection.get().getElementsByClass("offers-index pull-left text-nowrap").text();
+
         ArrayList<String> linkToTheOffer = new ArrayList<>();
 
-        int x = 0;
-        ArrayList<String> offerLink = new ArrayList<>();
 
         //System.out.println(links.get(0));
         int tmpFor = calculateTotalPages(offersCount);
 
         for (int j = 1; j <= tmpFor; j++) {
             System.out.println("-------------------------loading page...-------------------------");
-            connection = Jsoup.connect(sb.toString()+ j).timeout(15000);
-            System.out.println(sb.toString()+j);
+            connection = Jsoup.connect(url + j).timeout(15000);
+            System.out.println(url + j);
             links = connection.get().getElementsByTag("article");
             System.out.println("-------------------------PAGE " + j + "-------------------------");
             for (Element link : links) {
-                x++;
+
                 System.out.println("image: " + link.getElementsByClass("img-cover lazy").tagName("background-image").attr("data-src"));
                 if (link.attr("data-featured-name").contains("listing_no_promo")) {
                     System.out.println("link to a website: " + link.getElementsByTag("a").attr("href"));
@@ -69,10 +57,6 @@ public class JsoupRun {
             }
 
         }
-        System.out.println(x);
-
-
-
 
 
     }
@@ -103,5 +87,25 @@ public class JsoupRun {
     public static int calculateTotalPages(String offersCount) {
         int totalPages = (int) Math.ceil(Double.parseDouble(offersCount.substring(offersCount.lastIndexOf(":") + 1).replace(" ", "")) / 72);
         return totalPages;
+    }
+
+    public static String createURL() {
+        String sellOrRent;
+        String houseOrAccommodation;
+        String cityName;
+        System.out.println("Hello, would you like to sell or rent(sprzedaz/wynajem)?");
+        sellOrRent = scanner.nextLine().toLowerCase();
+        System.out.println("Okay and say me, would You like to live in a house or accommodation(dom/mieszkanie)?");
+        houseOrAccommodation = scanner.nextLine().toLowerCase();
+        System.out.println("almost done! The last thing is the city you want to live in(nazwa miasta): ");
+        cityName = scanner.nextLine().toLowerCase();
+        StringBuilder sb = new StringBuilder("https://www.otodom.pl/");
+        sb.append(sellOrRent).append("/");
+        sb.append(houseOrAccommodation).append("/");
+        sb.append(cityName).append("/?search&nrAdsPerPage=72&page=");
+
+        return sb.toString();
+
+
     }
 }
