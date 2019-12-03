@@ -29,5 +29,5 @@ Ograniczenia:
 Rozwiązanie:
 p1 = 15 
 p2 = 15
-Koszt = 45
+Koszt = 45 
 
