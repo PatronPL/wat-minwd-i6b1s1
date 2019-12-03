@@ -8,11 +8,12 @@ Jednostkowe nakłady środków na produkcje wyrobów przedstawiono w tabeli. Zna
 sprzedaży jednostki każdego z wyrobów (ostatni wiersz) wyznaczyć optymalne z punktu widzenia
 zysków rozmiary produkcji.
 
-                        Wyroby
-            1       2       3       4       Środki produkcja
-A           15      10      20      19      26000
-B           9       3       5       10      100000
-Zysk        6       3       5       2
+Wyroby
+| 1 | 2 | 3 | 4 | Środki produkcja |
+|---|---|---|---|---|
+| A | 15 | 10 | 20 | 19 | 26000 |
+| B | 9 | 3 | 5 | 10 | 100000 |
+| Zysk | 6 | 3 | 5 | 2 |
 
 Zbuduj model matematyczny i rozwiąż zadanie metodą geometryczną.
 
