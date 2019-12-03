@@ -1,0 +1,14 @@
+/home/damian/Dokumenty/Notes/lab3/65471/bin/Debug/netcoreapp2.2/65471.deps.json
+/home/damian/Dokumenty/Notes/lab3/65471/bin/Debug/netcoreapp2.2/65471.runtimeconfig.json
+/home/damian/Dokumenty/Notes/lab3/65471/bin/Debug/netcoreapp2.2/65471.runtimeconfig.dev.json
+/home/damian/Dokumenty/Notes/lab3/65471/bin/Debug/netcoreapp2.2/65471.dll
+/home/damian/Dokumenty/Notes/lab3/65471/bin/Debug/netcoreapp2.2/65471.pdb
+/home/damian/Dokumenty/Notes/lab3/65471/obj/Debug/netcoreapp2.2/65471.csprojAssemblyReference.cache
+/home/damian/Dokumenty/Notes/lab3/65471/obj/Debug/netcoreapp2.2/65471.csproj.CoreCompileInputs.cache
+/home/damian/Dokumenty/Notes/lab3/65471/obj/Debug/netcoreapp2.2/65471.RazorAssemblyInfo.cache
+/home/damian/Dokumenty/Notes/lab3/65471/obj/Debug/netcoreapp2.2/65471.RazorAssemblyInfo.cs
+/home/damian/Dokumenty/Notes/lab3/65471/obj/Debug/netcoreapp2.2/65471.AssemblyInfoInputs.cache
+/home/damian/Dokumenty/Notes/lab3/65471/obj/Debug/netcoreapp2.2/65471.AssemblyInfo.cs
+/home/damian/Dokumenty/Notes/lab3/65471/obj/Debug/netcoreapp2.2/65471.RazorTargetAssemblyInfo.cache
+/home/damian/Dokumenty/Notes/lab3/65471/obj/Debug/netcoreapp2.2/65471.dll
+/home/damian/Dokumenty/Notes/lab3/65471/obj/Debug/netcoreapp2.2/65471.pdb
