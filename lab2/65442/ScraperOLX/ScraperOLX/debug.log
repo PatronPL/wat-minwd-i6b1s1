@@ -1,0 +1,4 @@
+[1202/183627.670:ERROR:process_reader_win.cc(123)] NtOpenThread: {Odmowa dostêpu} Proces za¿¹da³ dostêpu do obiektu, ale prawa dostêpu nie zosta³y przyznane. (0xc0000022)
+[1202/183627.671:ERROR:exception_snapshot_win.cc(98)] thread ID 8008 not found in process
+[1202/191654.154:ERROR:process_reader_win.cc(123)] NtOpenThread: {Odmowa dostêpu} Proces za¿¹da³ dostêpu do obiektu, ale prawa dostêpu nie zosta³y przyznane. (0xc0000022)
+[1202/191654.154:ERROR:exception_snapshot_win.cc(98)] thread ID 2156 not found in process
