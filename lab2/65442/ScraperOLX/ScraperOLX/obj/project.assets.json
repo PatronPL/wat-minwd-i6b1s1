@@ -5861,11 +5861,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kubry\\Desktop\\ScraperOLX\\ScraperOLX\\ScraperOLX\\ScraperOLX.csproj",
+      "projectUniqueName": "C:\\Users\\kubry\\Desktop\\wat-minwd-i6b1s1\\lab2\\65442\\ScraperOLX\\ScraperOLX\\ScraperOLX.csproj",
       "projectName": "ScraperOLX",
-      "projectPath": "C:\\Users\\kubry\\Desktop\\ScraperOLX\\ScraperOLX\\ScraperOLX\\ScraperOLX.csproj",
+      "projectPath": "C:\\Users\\kubry\\Desktop\\wat-minwd-i6b1s1\\lab2\\65442\\ScraperOLX\\ScraperOLX\\ScraperOLX.csproj",
       "packagesPath": "C:\\Users\\kubry\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kubry\\Desktop\\ScraperOLX\\ScraperOLX\\ScraperOLX\\obj\\",
+      "outputPath": "C:\\Users\\kubry\\Desktop\\wat-minwd-i6b1s1\\lab2\\65442\\ScraperOLX\\ScraperOLX\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
