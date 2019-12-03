@@ -1,4 +1,4 @@
-Zadanie 7 Piotr Kostrzewski
+## Zadanie 7
 
 LP1 - liczba kilogramów paszy P1
 LP2 - liczba kilogramów paszy P2
@@ -27,16 +27,21 @@ Koszt całkowity zakupu - KCAL = LP1 * KP1 + LP2 * KP2 + LP3 * KP3 + LP4 * KP4
 Całkowita zawartość składnika A - ACAL = LP1 * A1 + LP2 * A2 + LP3 * A3 + LP4 * A4
 Całkowita zawartość składnika B - BCAL = LP1 * B1 + LP2 * B2 + LP3 * B3 + LP4 * B4
 
-Model:
+## Model:
 9.6 * LP1 + 14.4 * LP2 + 10.8 * LP3 + 7.2 * LP4 -> MIN
 LP1 * 0.8 + LP2 * 2.4 + LP3 * 0.9 + LP4 * 0.4 >= 1200
 LP1 * 0.6 + LP2 * 0.6 + LP3 * 0.3 + LP4 * 0.3 >= 600
 
-Rozwiązanie optymalne:
+## Rozwiązanie optymalne:
 750 kg paszy P1 i 250 kg paszy P2.
 
 
-Jak odpalić (linux):
+## Jak odpalić (linux):
+
 - instalujemy pipa: sudo apt-get install pip,
 - odpalamy plik requirements.txt żeby zaciągnąć pulpa: pip install -r requirements.txt
 - odpalamy skrypcik python bydlo.py
+
+## Autor 
+
+Piotr Kostrzewski
