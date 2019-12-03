@@ -33,7 +33,10 @@ request('https://www.otomoto.pl/osobowe/'+brand+'/'+model+'/'+location+'/'+
             
             var numberOfAnnoucements = $('.selected .counter').text()
             numberOfAnnoucements = numberOfAnnoucements.replace("(","").replace(")","")
-
+            console.log("URL:")
+            console.log('https://www.otomoto.pl/osobowe/'+brand+'/'+model+'/'+location+'/'+
+            '?search[filter_float_price%3Afrom]='+priceFrom+'&search[filter_float_price%3Ato]='+priceTo+
+            '&search[filter_enum_fuel_type][0]='+fuel+'&page='+actualPage)
 
 
 
