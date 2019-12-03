@@ -1,14 +1,15 @@
 package pl.naru;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.io.FileWriter;
 import java.io.IOException;
-import java.sql.DataTruncation;
-import java.util.ArrayList;
+import java.util.Base64;
 import java.util.Scanner;
 
 public class JsoupRun {
@@ -17,45 +18,63 @@ public class JsoupRun {
     static Elements links;
     static String url;
     static final String FIRST_PAGE = "1";
+    static JSONObject jsonObject;
+    static JSONArray jsonArray;
+    static final String FILE_NAME = "results.json";
 
     public static void main(String[] args) throws IOException {
+
+
         url = createURL();
 
         connection = Jsoup.connect(url + FIRST_PAGE);
         String offersCount = connection.get().getElementsByClass("offers-index pull-left text-nowrap").text();
 
-        ArrayList<String> linkToTheOffer = new ArrayList<>();
 
 
         //System.out.println(links.get(0));
         int tmpFor = calculateTotalPages(offersCount);
+        try (FileWriter fw = new FileWriter(FILE_NAME)) {
 
-        for (int j = 1; j <= tmpFor; j++) {
-            System.out.println("-------------------------loading page...-------------------------");
-            connection = Jsoup.connect(url + j).timeout(15000);
-            System.out.println(url + j);
-            links = connection.get().getElementsByTag("article");
-            System.out.println("-------------------------PAGE " + j + "-------------------------");
-            for (Element link : links) {
 
-                System.out.println("image: " + link.getElementsByClass("img-cover lazy").tagName("background-image").attr("data-src"));
-                if (link.attr("data-featured-name").contains("listing_no_promo")) {
-                    System.out.println("link to a website: " + link.getElementsByTag("a").attr("href"));
-                    linkToTheOffer.add(link.getElementsByTag("a").attr("href"));
+            for (int j = 1; j <= tmpFor; j++) {
 
-                    //System.out.println(link.getElementsByClass("params").tagName("li").text());
-                    for (Element e : link.getElementsByClass("params")) {
 
-                        for (int i = 0; i <= e.getElementsByTag("li").size() - 1; i++) {
-                            System.out.println(e.getElementsByTag("li").get(i).text());
+                System.out.println("-------------------------loading page...-------------------------");
+                connection = Jsoup.connect(url + j).timeout(15000);
+                System.out.println(url + j);
+                links = connection.get().getElementsByTag("article");
+                System.out.println("-------------------------PAGE " + j + "-------------------------");
+                for (Element link : links) {
+                    jsonObject = new JSONObject();
+                    jsonArray = new JSONArray();
+                    jsonObject.put("image", Base64.getUrlEncoder().encodeToString((link.getElementsByClass("img-cover lazy").tagName("background-image").attr("data-src")).getBytes()));
+                    System.out.println("image: " + link.getElementsByClass("img-cover lazy").tagName("background-image").attr("data-src"));
+                    if (link.attr("data-featured-name").contains("listing_no_promo")) {
+                        jsonObject.put("URL", link.getElementsByClass("img-cover lazy").tagName("background-image").attr("data-src"));
+                        System.out.println("link to a website: " + link.getElementsByTag("a").attr("href"));
+
+                        //System.out.println(link.getElementsByClass("params").tagName("li").text());
+                        for (Element e : link.getElementsByClass("params")) {
+
+                            for (int i = 0; i <= e.getElementsByTag("li").size() - 1; i++) {
+                                jsonArray.put(e.getElementsByTag("li").get(i).text());
+                                System.out.println(e.getElementsByTag("li").get(i).text());
+                            }
+
                         }
 
                     }
+                    jsonObject.put("details", jsonArray);
+                    fw.write(jsonObject.toString());
+                    fw.write("\n");
+                    //fw.flush();
 
                 }
 
             }
-
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
 
