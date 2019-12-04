@@ -1,0 +1,8 @@
+C:\Users\ppmic\source\repos\LpSolveDotNet_Example\bin\Debug\LpSolveDotNet_Example.exe.config
+C:\Users\ppmic\source\repos\LpSolveDotNet_Example\bin\Debug\LpSolveDotNet_Example.exe
+C:\Users\ppmic\source\repos\LpSolveDotNet_Example\bin\Debug\LpSolveDotNet_Example.pdb
+C:\Users\ppmic\source\repos\LpSolveDotNet_Example\bin\Debug\LpSolveDotNet.dll
+C:\Users\ppmic\source\repos\LpSolveDotNet_Example\obj\Debug\LpSolveDotNet_Example.csprojAssemblyReference.cache
+C:\Users\ppmic\source\repos\LpSolveDotNet_Example\obj\Debug\LpSolveDotNet_Example.csproj.CopyComplete
+C:\Users\ppmic\source\repos\LpSolveDotNet_Example\obj\Debug\LpSolveDotNet_Example.exe
+C:\Users\ppmic\source\repos\LpSolveDotNet_Example\obj\Debug\LpSolveDotNet_Example.pdb

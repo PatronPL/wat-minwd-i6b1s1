@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ZtmWatcher</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="connection_error">Wystąpił błąd połączenia</string>
+    <string name="cannot_get_buses_or_trams">Nie udało się pobrać danych</string>
+    <string name="choose_conveyance">Wybierz środek transportu:</string>
+    <string name="enter_line_number">Podaj numer linii:</string>
+    <string name="line_number_hint">Wpisz numer autobusu lub tramwaju</string>
+    <string name="ztm_logo">ZtmLogo</string>
+    <string name="main_button">Wyszukaj</string>
+    <string name="line_number_cannot_be_empty">Numer linii nie może być pusty</string>
+    <string name="choosed_line_does_not_drive">Wybrana linia nie istnieje, bądź aktualnie nie ma żadnych kursów</string>
+    <string name="ok">OK</string>
+    <string name="cannot_read_marker_data">Nie można wczytać danych</string>
+</resources>

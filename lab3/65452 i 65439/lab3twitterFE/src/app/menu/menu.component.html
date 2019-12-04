@@ -1,0 +1,74 @@
+<div class="card mt-5" style="width: 25rem;">
+  <div class="card-header">Lab3</div>
+
+  <div class="card-body">
+    <form>
+      <div class="form-group">
+        <label for="name">Username: </label>
+        <input type="text" class="form-control" id="username" [(ngModel)]="username"
+          [ngModelOptions]="{standalone: true}" required>
+        <div></div>
+        <label for="days">How many last days: </label>
+        <input type="text" class="form-control" id="days" required>
+      </div>
+      <button type="submit" class="btn btn-success" id="submitBtn">User info</button>
+      <button type="submit" class="btn btn-success" id="submitBtn2">Tweets</button>
+      <button type="submit" class="btn btn-success" id="submitBtn3">Word cloud</button>
+    </form>
+  </div>
+</div>
+
+<table>
+  <tr>
+    <td>
+      <div *ngIf="userInfo" class="card mt-6" style="width: 25rem;">
+        <div class="card-body" id="userInfo">
+          <form>
+            <div class="form-group">
+              <label for="name">Fullname: </label>
+              <input [readonly]="true" type="text" class="form-control" id="fullname" [(ngModel)]="fullname"
+                [ngModelOptions]="{standalone: true}">
+              <div></div>
+              <label for="name">Twitter name: </label>
+              <input [readonly]="true" type="text" class="form-control" id="twittername" [(ngModel)]="twittername"
+                [ngModelOptions]="{standalone: true}">
+              <div></div>
+              <div></div>
+              <label for="name">Joined: </label>
+              <input [readonly]="true" type="text" class="form-control" id="joined" [(ngModel)]="joined"
+                [ngModelOptions]="{standalone: true}">
+              <div></div>
+              <label for="name">Description: </label>
+              <textarea [readonly]="true" type="text" class="form-control" id="description" [(ngModel)]="description"
+                [ngModelOptions]="{standalone: true}"></textarea>
+              <div></div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div *ngIf="tweets" class="card mt-6" style="width: 25rem;">
+        <div class="card-body" id="userInfo">
+          <form>
+            <div class="form-group">
+              <label for="name">First possible tweet: </label>
+              <textarea [readonly]="true" class="form-control" [(ngModel)]="ftweet"
+                [ngModelOptions]="{standalone: true}"></textarea>
+              <div></div>
+              <label for="name">Latest tweet: </label>
+              <textarea [readonly]="true" class="form-control" [(ngModel)]="ltweet"
+                [ngModelOptions]="{standalone: true}"></textarea>
+              <div></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div *ngIf="showCloud" class="container text-right" id="cloud">
+        <angular-tag-cloud [data]="data" [width]="options.width" [height]="options.height"
+          [overflow]="options.overflow" [zoomOnHover]="zoomOnHoverOptions">
+        </angular-tag-cloud>
+      </div>
+    </td>
+  </tr>
+</table>
