@@ -1,0 +1,13 @@
+E:\WAT\MINWD\Lab1\Zadanie optymalizacyjne\Zadanie optymalizacyjne\bin\Debug\google-ortools-native.dll
+E:\WAT\MINWD\Lab1\Zadanie optymalizacyjne\Zadanie optymalizacyjne\bin\Debug\Zadanie optymalizacyjne.exe.config
+E:\WAT\MINWD\Lab1\Zadanie optymalizacyjne\Zadanie optymalizacyjne\bin\Debug\Zadanie optymalizacyjne.exe
+E:\WAT\MINWD\Lab1\Zadanie optymalizacyjne\Zadanie optymalizacyjne\bin\Debug\Zadanie optymalizacyjne.pdb
+E:\WAT\MINWD\Lab1\Zadanie optymalizacyjne\Zadanie optymalizacyjne\bin\Debug\Google.OrTools.dll
+E:\WAT\MINWD\Lab1\Zadanie optymalizacyjne\Zadanie optymalizacyjne\bin\Debug\Google.Protobuf.dll
+E:\WAT\MINWD\Lab1\Zadanie optymalizacyjne\Zadanie optymalizacyjne\bin\Debug\Google.OrTools.xml
+E:\WAT\MINWD\Lab1\Zadanie optymalizacyjne\Zadanie optymalizacyjne\bin\Debug\Google.Protobuf.pdb
+E:\WAT\MINWD\Lab1\Zadanie optymalizacyjne\Zadanie optymalizacyjne\bin\Debug\Google.Protobuf.xml
+E:\WAT\MINWD\Lab1\Zadanie optymalizacyjne\Zadanie optymalizacyjne\obj\Debug\Zadanie optymalizacyjne.csprojAssemblyReference.cache
+E:\WAT\MINWD\Lab1\Zadanie optymalizacyjne\Zadanie optymalizacyjne\obj\Debug\Zadanie optymalizacyjne.csproj.CopyComplete
+E:\WAT\MINWD\Lab1\Zadanie optymalizacyjne\Zadanie optymalizacyjne\obj\Debug\Zadanie optymalizacyjne.exe
+E:\WAT\MINWD\Lab1\Zadanie optymalizacyjne\Zadanie optymalizacyjne\obj\Debug\Zadanie optymalizacyjne.pdb
