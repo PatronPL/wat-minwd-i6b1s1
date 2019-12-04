@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="Scraper-otodom:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/Scraper_otodom_jar</output-path>
-    <root id="archive" name="Scraper-otodom.jar">
-      <element id="module-output" name="Scraper-otodom" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar" path-in-jar="/" />
-    </root>
-  </artifact>
-</component>
