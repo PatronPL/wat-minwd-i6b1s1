@@ -1,5 +1,7 @@
 Michał Kozłowski I6B1S1
 
+## Uruchomienie
+
 W cmd:
 1. pip install -r requirements.txt
 2. python NazwaSkryptu.py "C:\Ścieżka\Do\Chromedriver.exe" "Argumenty dla metod"
