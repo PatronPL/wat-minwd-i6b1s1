@@ -1,1 +1,0 @@
-Należy uruchomić wierz poleceń windows z prawami administratora,wejść za pomocą komendy "cd" w katalog w którym znajduje się plik "scraper.jar", a następnie wpisać "java -jar scraper.jar" 
