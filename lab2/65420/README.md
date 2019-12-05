@@ -4,11 +4,12 @@ Scraper pobierający i zapisujący dane ogłoszeń samochodów osobowych z serwi
 
 # Wymagania 
 
-Język GO, który można pobrać ze strony https://golang.org/doc/install
-Oraz biblioteki które można pobrać w następujący sposób:
+Język GO, który można pobrać ze strony https://golang.org/doc/install  
+GitHub bash, który można pobrać ze storny https://git-scm.com/downloads  
+Oraz biblioteki które można pobrać w następujący sposób:  
 Należy uruchomić konsole systemową i wpisać poniższe polecania:
-	- go get github.com/PuerkitoBio/goquery
-	- go get github.com/polds/imgbase64
+- go get github.com/PuerkitoBio/goquery
+- go get github.com/polds/imgbase64
 
 # Instrukcja
 
@@ -29,12 +30,12 @@ Należy uruchomić konsole systemową i wpisać poniższe polecania:
 # Plik otomoto.json
 
 Legenda:
-- "title": <- nazwa ogłoszenia,
-- "link":  <- link do ogłoszenia,
-- "year": <- rok produkcji,
-- "mileage": <- przebieg,
-- "engine_capacity": <- pojemność silnika,
-- "fuel_type": " <- rodzaj paliwa,
-- "city": <- miasto (z województwem),
-- "price": <- cena,
+- "title": <- nazwa ogłoszenia
+- "link":  <- link do ogłoszenia
+- "year": <- rok produkcji
+- "mileage": <- przebieg
+- "engine_capacity": <- pojemność silnika
+- "fuel_type": " <- rodzaj paliwa
+- "city": <- miasto (z województwem)
+- "price": <- cena
 - "img": <- zdjęcie zakodowane w base64

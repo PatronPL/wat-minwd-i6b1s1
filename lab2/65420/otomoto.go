@@ -15,6 +15,7 @@ import (
 
 var elements = []Offer{}
 var offersList = Offers{elements}
+var counter int =0
 
 type Offers struct {
         Elements []Offer `json:"offers"`
@@ -33,21 +34,45 @@ type Offer struct {
 }
 
 func processElement(index int, element *goquery.Selection) {
-	_title, v2:= element.Find("a").Attr("title")	
+
+	_title, v2:= element.Find("a").Attr("title")
+
 	_link, v1 := element.Attr("data-href")
 
 	details := element.Find("div").Find("ul").Find("li").Find("span").Contents().Text()
-	_year := strings.Fields(details)[0]
-	_mileage := strings.Fields(details)[1] + " " + strings.Fields(details)[2] + strings.SplitAfter(strings.Fields(details)[3], "m")[0]
-	_engine_capacity := strings.SplitAfter(strings.Fields(details)[3], "m")[1] + strings.Fields(details)[4] + strings.SplitAfter(strings.Fields(details)[5], "3")[0]
-	_fuel_type := strings.SplitAfter(strings.Fields(details)[5], "3")[1]
+
+	_year := details[0:4]
+
+	_mileage := "Brak podanego przebiegu w ofercie"
+	if len(strings.SplitAfter(details[5:len(details)], "km")) > 1{
+		_mileage = strings.SplitAfter(details[5:len(details)], "km")[0]
+	}
+
+	_engine_capacity := "Brak podanej pojemnosci silnika w ofercie"
+	if len(strings.SplitAfter(details, "cm3")) > 1{
+		_engine_capacity = strings.SplitAfter(details, "cm3")[0][len(strings.SplitAfter(details, "cm3")[0])-9:len(strings.SplitAfter(details, "cm3")[0])] 
+	}
+
+	
+	_fuel_type := "Brak podanego paliwa w ofercie"
+	if len(strings.SplitAfter(details, "Benzyna")) < 2{
+		_fuel_type = strings.SplitAfter(details, "Diesel")[0][len(strings.SplitAfter(details, "Diesel")[0])-6:len(strings.SplitAfter(details, "Diesel")[0])]
+	}else{
+		_fuel_type = strings.SplitAfter(details, "Benzyna")[0][len(strings.SplitAfter(details, "Benzyna")[0])-7:len(strings.SplitAfter(details, "Benzyna")[0])] + strings.SplitAfter(details, "Benzyna")[1]
+	}
+	
 	_city := element.Find("div").Find("h4").Find("span").Contents().Text()
+	
 	_price := element.Find("div").Find("div").Find("span").Find("span").Contents().Text()
+	
 	_img, v3 := element.Find("div").Find("a").Find("img").Attr("data-src")
+	
 
 	if v1 && v2 && v3{
 		element := Offer{_title, _link, _year, _mileage, _engine_capacity, _fuel_type, _city, _price, strings.SplitAfter(imgbase64.FromRemote(_img), ",")[1]}	
 		offersList.Elements = append(offersList.Elements, element)
+		counter++
+		fmt.Printf("Pobieranie ofert, aktualna liczba: %d\n", counter)
 	}
 }
 
@@ -77,9 +102,8 @@ func main() {
 	fmt.Print("Lokalizacja(miasto): ")
 	city := scanner()
 	
-	url := "https://www.otomoto.pl/osobowe/" + brand + "/" + model + "/od-" + minYear + "/" + city + "/?search%5Bfilter_float_price%3Afrom%5D=" + minPrice + "&search%5Bfilter_float_price%3Ato%5D=" + maxPrice + "&search%5Bfilter_float_year%3Ato%5D=" + maxYear + "&search%5Bfilter_float_mileage%3Afrom%5D=" + minMileage + "&search%5Bfilter_float_mileage%3Ato%5D=" + maxMileage
+	url := "https://www.otomoto.pl/osobowe/" + brand + "/" + model + "/od-" + minYear + "/" + city + "/?search%5Bfilter_float_price%3Afrom%5D=" + minPrice + "&search%5Bfilter_float_price%3Ato%5D=" + maxPrice + "&search%5Bfilter_float_year%3Ato%5D=" + maxYear + "&search%5Bfilter_float_mileage%3Afrom%5D=" + minMileage + "&search%5Bfilter_float_mileage%3Ato%5D=" + maxMileage + "&search%5Border%5D=created_at%3Adesc&search%5Bbrand_program_id%5D%5B0%5D=&search%5Bcountry%5D=&page="
 
-	
 	page := 1
 	oldpage := 1
 	
@@ -95,9 +119,8 @@ func main() {
 		if err != nil {
 			log.Fatal("Error loading HTTP response body. ", err)
 		}
-		
+	
 		document.Find("div").Find("div").Find("section").Find("div").Find("div").Find("div").Find("div").Find("div").Find("article").Each(processElement)
-		
 		document.Find("div").Find("div").Find("section").Find("div").Find("div").Find("ul").Find("li").Each(func(index int, element *goquery.Selection) {
 				next, v1 := element.Attr("class")
 				if v1{
